@@ -4,12 +4,13 @@ public class App {
         QueueImpl q = new QueueImpl();
 
       //  q.checkCapacity();
-        System.out.println(q.add("Joker"));
-        System.out.println(q.add("Batman"));
+        System.out.println(q.addQueue("Joker"));
+        System.out.println(q.addQueue("Batman"));
+        System.out.println(q.addQueue("two-Faces"));
         System.out.println(q.showlast());
         System.out.println(q.showFirst());
         System.out.println(q.checkCapacity());
-        System.out.println(q.remove());
+        System.out.println(q.removeQueue());
 
 
     }
