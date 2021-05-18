@@ -1,13 +1,10 @@
 import java.util.ArrayList;
 
-public interface Queue {
+        public interface Queue {
 
-    public ArrayList<String> removeQueue();
-    public ArrayList<String> addQueue(String element);
-    public  String  showFirst();
-    public String showlast();
-    public String checkCapacity();
-
-
-
-}
+            ArrayList<String> removeQueue(ArrayList<String> place);
+            ArrayList<String> addQueue(String element);
+            String  showFirst(ArrayList<String> place);
+            String showlast(ArrayList<String> place);
+            String checkCapacity(ArrayList<String> place);
+        }

@@ -9,9 +9,9 @@ public class QueueImpl implements Queue {
     }
 
     @Override
-    public ArrayList<String> removeQueue() { // remove the first element from the queue
-        Queue.remove(0);
-        return Queue;
+    public ArrayList<String> removeQueue(ArrayList<String> place) { // remove the first element from the queue
+        place.remove(0);
+        return place;
     }
 
    @Override
@@ -27,20 +27,20 @@ public class QueueImpl implements Queue {
     }
 
     @Override // show the first element
-    public String showFirst() {
-        return this.Queue.get(0);
+    public String showFirst(ArrayList<String> place) {
+        return place.get(0);
     }
 
     @Override // show  the last element
-    public String showlast() {
-        return this.Queue.get(Queue.size() -1);
+    public String showlast(ArrayList<String> place) {
+        return place.get(place.size() -1);
     }
 
     @Override
-    public String checkCapacity() {// Queue capacity checks if its full or empty
-        if(Queue.size() -1 == 0){return "queue is empty";}
-        if(Queue.size() -1 == this.Size){return "queue is full";}
-        return "The Queue has ("+this.Queue.size()+") elements.";
+    public String checkCapacity(ArrayList<String> place) {// Queue capacity checks if its full or empty
+        if(place.size() -1 == 0){return "queue is empty";}
+        if(place.size() -1 == place.lastIndexOf(place)){return "queue is full";}
+        return "The Queue has ("+place.size()+") elements.";
     }
 
 }
